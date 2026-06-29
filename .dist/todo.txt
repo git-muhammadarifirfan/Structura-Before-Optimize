@@ -1,0 +1,17 @@
+1. history pengguna -> (done)
+
+2. order admin detail penjualan -> order sesuai dengan adminnya -->(menyesuaikan sebelah)
+
+3. admin di order dia bisa ubah status delivery , sucsess , sama tambahin database description
+   admin bisa ubah deskription nanti buat di history untuk detail pesanannya -> ez mah ini
+
+4. alamat button set default (done)
+
+5. forgot password (done)
+
+
+maintenance
+
+1. edit alamat -> (done)
+2. rating , comment product
+3. notif pop up semua harus ada
