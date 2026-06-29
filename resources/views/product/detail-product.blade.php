@@ -15,8 +15,6 @@
     <title>Structura</title>
     @vite('resources/css/app.css')
 
-    {{-- PENANDA BAB IV - BASELINE: payload dan script tambahan tercatat pada halaman Detail Produk. --}}
-    {{-- Baseline berat non-visual: tidak mengubah tampilan UI detail product --}}
     <style>
         .baseline-silent-payload { position:absolute!important; left:-99999px!important; top:0!important; width:1px!important; height:1px!important; overflow:hidden!important; opacity:.01!important; pointer-events:none!important; z-index:-1!important; }
         .baseline-silent-card { width:240px; min-height:310px; margin:3px; padding:10px; background:#fff; box-shadow:0 18px 40px rgba(15,23,42,.16); filter:saturate(1.2) contrast(1.05); }
@@ -200,7 +198,7 @@
                     </button>
                 </form>
             </div>
-        </div>        {{-- Payload baseline non-visual: related product tetap diambil dari database, tapi tidak tampil di UI --}}
+        </div>
         <div class="baseline-silent-payload" aria-hidden="true">
             @foreach (($relatedProducts ?? collect()) as $related)
                 <article class="baseline-silent-card">
@@ -225,7 +223,6 @@
         </div>
 
 
-    {{-- Baseline berat untuk Lighthouse: simulasi UI analytics dan kalkulasi rekomendasi di sisi client --}}
     <script>
         (function () {
             const runHeavyBaseline = () => {

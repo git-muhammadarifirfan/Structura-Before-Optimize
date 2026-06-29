@@ -18,8 +18,6 @@
     <!-- Styles -->
     @vite('resources/css/app.css')
 
-    {{-- PENANDA BAB IV - BASELINE: beban tambahan non-visual/CSS/JavaScript tercatat pada halaman Katalog. --}}
-    {{-- Baseline berat untuk skripsi: CSS ekstra khusus halaman product --}}
     <style>
         .baseline-heavy-card { transform: translateZ(0); filter: drop-shadow(0 18px 28px rgba(15, 23, 42, .18)); }
         .baseline-heavy-card img { transition: transform .45s ease, filter .45s ease; filter: saturate(1.25) contrast(1.08); }
@@ -239,7 +237,6 @@
                             </a>
                         @endforeach
                     </div>
-                    {{-- Baseline berat non-visual: data tetap dari database, UI tetap original --}}
                     <div aria-hidden="true" class="sr-only" id="baseline-db-payload">
                         @foreach (($featuredProducts ?? collect()) as $featured)
                             <span data-sku="{{ $featured->sku }}" data-price="{{ $featured->price }}">{{ $featured->product_name }} {{ $featured->description }} {{ $featured->brand }} {{ $featured->category->category_name ?? '-' }}</span>
@@ -309,7 +306,6 @@
 
 
 
-    {{-- Baseline berat untuk Lighthouse: simulasi UI analytics dan kalkulasi rekomendasi di sisi client --}}
     <script>
         (function () {
             const runHeavyBaseline = () => {

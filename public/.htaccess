@@ -1,6 +1,3 @@
-# DOKUMENTASI KODE APLIKASI - VERSI SEBELUM OPTIMASI
-# Penanda kondisi penelitian: baseline sebelum penerapan Web Performance Optimization.
-# Catatan: komentar dokumentasi ini tidak mengubah perilaku konfigurasi.
 
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
@@ -24,4 +21,4 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
-# PENANDA BAB IV - BASELINE: belum terdapat blok cache-control/kompresi aset statis yang ditemukan pada versi setelah optimasi.
+

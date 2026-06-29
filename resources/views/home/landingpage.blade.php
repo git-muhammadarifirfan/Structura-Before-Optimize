@@ -23,7 +23,6 @@
 
 <body class="bg-white font-Montserrat">
 
-    {{-- PENANDA BAB IV - BASELINE: resource chat eksternal dimuat langsung pada tampilan awal. --}}
     <!--cutomerchat-->
     <script src="//code.tidio.co/hqsiluutklrxvrzkhjvle2sh7trgrvs1.js" async></script>
 
@@ -60,7 +59,6 @@
 
     {{-- Navbar --}}
     <x-navbar></x-navbar>
-    {{-- PENANDA BAB IV - BASELINE: hero masih memakai aset PNG/background tanpa prioritas loading eksplisit. --}}
     {{-- Image Top Landingpage --}}
     <div class="mt-8 bg-smoothcream max-w-[1280px] mx-auto h-[300px] w-full relative bg-cover bg-center lg:rounded-[10px] xl:rounded-[10px] 2xl:rounded-[10px]"
         style="background-image: url('{{ asset('images/landingpages/contructionsimage.png') }}');">

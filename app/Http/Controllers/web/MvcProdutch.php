@@ -59,8 +59,6 @@ class MvcProdutch extends Controller
         $productCount = (clone $query)->count();
 
         /** @var \Illuminate\Pagination\LengthAwarePaginator $products */
-        // Versi baseline skripsi: sengaja menampilkan lebih banyak data produk dari database
-        // agar halaman product terasa berat untuk pembanding sebelum optimasi.
         $products = $query->paginate(80);
         $products->withQueryString();
 
@@ -73,7 +71,6 @@ class MvcProdutch extends Controller
 
     public function show($sku)
     {
-        // Tetap memakai database, namun data pendukung dibuat lebih banyak untuk baseline berat.
         $product = Product::where('sku', $sku)->firstOrFail();
 
         $relatedProducts = Product::where('id', '!=', $product->id)
